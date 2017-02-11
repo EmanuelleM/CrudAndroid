@@ -28,7 +28,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_registration);
 
         //initializing firebase auth object
         firebaseAuth = FirebaseAuth.getInstance();
@@ -36,6 +36,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         editLogin = (EditText) findViewById(R.id.email);
         editPassword = (EditText) findViewById(R.id.password);
         btnLoginRegister = (Button) findViewById(R.id.email_sign_in_button);
+        btnLoginRegister.setText(R.string.action_register);
 
         progressLogin = new ProgressDialog(this);
 
