@@ -7,12 +7,12 @@
     <string name="prompt_password">Senha (opcional)</string>
     <string name="action_sign_in">Login</string>
     <string name="action_register">Cadastro</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
+    <string name="textview">TextView</string>
+    <string name="make_login">Fazendo Login…</string>
+    <string name="enter_your_email">Informe seu email</string>
+    <string name="enter_your_password">Informe sua senha</string>
+    <string name="registering_user">Cadastrando usuário…</string>
+    <string name="successfully_registred">Usuario cadastrado com sucesso</string>
+    <string name="regristration_error">Erro no registro</string>
+    <string name="Invalid_user">Verifique se está correto o email de login ou a senha</string>
 </resources>

@@ -52,19 +52,19 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
 
         //checking if email and passwords are empty
         if(TextUtils.isEmpty(email)){
-            Toast.makeText(this,"Informe seu email",Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.enter_your_email,Toast.LENGTH_LONG).show();
             return;
         }
 
         if(TextUtils.isEmpty(password)){
-            Toast.makeText(this,"Informe sua senha",Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.enter_your_password,Toast.LENGTH_LONG).show();
             return;
         }
 
         //if the email and password are not empty
         //displaying a progress dialog
 
-        progressLogin.setMessage("Registering Please Wait...");
+        progressLogin.setMessage(getString(R.string.registering_user));
         progressLogin.show();
 
         //creating a new user
@@ -75,10 +75,10 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
                         //checking if success
                         if(task.isSuccessful()){
                             //display some message here
-                            Toast.makeText(RegistrationActivity.this,"Successfully registered",Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegistrationActivity.this, R.string.successfully_registred,Toast.LENGTH_LONG).show();
                         }else{
                             //display some message here
-                            Toast.makeText(RegistrationActivity.this,"Registration Error",Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegistrationActivity.this, R.string.regristration_error,Toast.LENGTH_LONG).show();
                         }
                         progressLogin.dismiss();
                     }
