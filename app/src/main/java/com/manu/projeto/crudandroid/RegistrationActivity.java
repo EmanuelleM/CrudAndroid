@@ -1,6 +1,7 @@
 package com.manu.projeto.crudandroid;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -76,6 +77,9 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
                         if(task.isSuccessful()){
                             //display some message here
                             Toast.makeText(RegistrationActivity.this, R.string.successfully_registred,Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            intent.putExtra("nome", editLogin.getText().toString().trim());
+                            startActivity(intent);
                         }else{
                             //display some message here
                             Toast.makeText(RegistrationActivity.this, R.string.regristration_error,Toast.LENGTH_LONG).show();

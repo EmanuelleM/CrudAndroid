@@ -24,6 +24,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public final static String EXTRA_MESSAGE = "com.manu.projeto.crudandroid.MESSAGE";
+
     //defining firebaseauth object
     private FirebaseAuth firebaseAuth;
 
@@ -53,6 +55,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //        }
 
         editLogin = (EditText) findViewById(R.id.email);
+        String message = editLogin.getText().toString();
         editPassword = (EditText) findViewById(R.id.password);
         btnLogin = (Button) findViewById(R.id.email_sign_in_button);
         btnLogin.setText(R.string.action_sign_in);
@@ -67,7 +70,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
     private void userLogin(){
-        String email = editLogin.getText().toString().trim();
+        final String email = editLogin.getText().toString().trim();
         String password  = editPassword.getText().toString().trim();
 
 
@@ -98,7 +101,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         if(task.isSuccessful()){
                             //start the profile activity
                             finish();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            intent.putExtra("nome", editLogin.getText().toString().trim());
+                            startActivity(intent);
+
+
                         }
                         if(!task.isSuccessful()){
                             Toast.makeText(LoginActivity.this, R.string.Invalid_user,Toast.LENGTH_LONG).show();
