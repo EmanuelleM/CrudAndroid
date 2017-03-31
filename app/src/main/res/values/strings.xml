@@ -15,4 +15,5 @@
     <string name="successfully_registred">Usuario cadastrado com sucesso</string>
     <string name="regristration_error">Erro no registro</string>
     <string name="Invalid_user">Verifique se está correto o email de login ou a senha</string>
+    <string name="login_error">nao login</string>
 </resources>
